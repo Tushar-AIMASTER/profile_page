@@ -1,0 +1,605 @@
+/* CSS styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; /* Or your preferred max width */
+    margin: auto;
+}
+
+.about-me {
+    display: inline-block; /* Allows the application of width */
+    min-width: 350px; /* Adjust based on your longest text */
+    text-align: left; /* Aligns the text to the left */
+}
+
+
+hr {
+    width: 50%;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+    color: #333;
+    text-decoration: none;
+}
+
+a {
+    font-weight: 400;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.fas, .fab {
+    margin-right: 1px;
+    color: inherit;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.email-icon {
+    background-color: #dd4b39;
+}
+
+.linkedin-icon {
+    background-color: #0e76a8;
+}
+
+.icon-link:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to right, #831bcd, #f9620b);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+header p {
+    color: #ccc;
+    max-width: 60%; /* Adjust this value based on your preference */
+    margin: 0 auto; /* Centers the paragraph */
+    padding: 0 25px; /* Adds padding to the left and right */
+    text-align: center; /* Optional: improves readability for large blocks of text */
+}
+
+
+footer {
+    width: 100%;
+    background: linear-gradient(to right, #831bcd, #f9620b);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skills-list li {
+    list-style-type: none;
+    background: #f0f2f5;
+    color: #333; /* Changed text color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: bounce 1s infinite alternate; /* Apply bounce animation */
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #333; /* Changed label color */
+}
+
+form input[type="text"], form input[type="email"], form textarea, form button {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0; /* Ensures vertical spacing */
+}
+
+form button {
+    background-image: linear-gradient(to right, #831bcd, #f9620b);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form button:hover {
+    background-image: linear-gradient(to right, #f9620b, #831bcd);
+}
+
+@media only screen and (max-width: 768px) {
+    .skills-list {
+        flex-direction: column; /* Stacks skills vertically on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header, footer {
+        padding: 15px; /* Adjusts padding for smaller screens */
+    }
+
+    section, form {
+        width: calc(100% - 20px); /* Adjusts width to ensure spacing on very small screens */
+        margin: 10px auto;
+    }
+
+    .icon-link {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px; /* Adjusts icon size and spacing for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 16px; /* Adjusts heading sizes for better readability on small devices */
+    }
+}
+
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+.horizontal-scroll {
+    overflow-x: hidden; /* Hide any overflowing content */
+    width: 100%; /* Occupy full width of the screen */
+}
+
+.icon-container {
+    display: flex; /* Display icons in a row */
+    animation: scrollAnimation 10s linear infinite; /* Adjust animation duration as needed */
+    width: max-content; /* Make the container width fit its content */
+}
+
+.icon-container img {
+    width: 60px; /* Adjust the width of icons as needed */
+    height: 60px; /* Adjust the height of icons as needed */
+    margin-right: 20px; /* Adjust margin between icons as needed */
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(100vw); /* Start from the right edge of the viewport */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left edge */
+    }
+}
+
+/* CSS for Dark Mode */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode button {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-mode p {
+    color: #fff;
+}
+
+/* --------------------------- Programming skill section --------------------------- */
+#programming-languages {
+    margin-top: 50px; /* Adjust spacing as needed */
+}
+
+#programming-languages .skill {
+    margin-bottom: 20px;
+}
+
+#programming-languages .progress-bar {
+    width: 0;
+    height: 20px;
+    background: linear-gradient(to right, #831bcd, #f9620b);
+    border-radius: 10px;
+}
+
+#programming-languages .progress {
+    height: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+#programming-languages .progress-bar.animated {
+    animation: animateProgress 1s ease forwards;
+}
+
+@keyframes animateProgress {
+    to {
+        width: var(--progress); /* Animate to the specified progress */
+    }
+}
+
+/* Style for Thumbnails Section */
+#projects {
+    display: grid;
+    width: 100%; /* Set the width to 100% */
+    max-width: 1200px; /* Adjust the max-width property as needed */
+    margin: 0 auto; /* Center the projects section horizontally */
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    gap: 10px; /* Spacing between thumbnails */
+}
+
+.project-thumbnail {
+    border: 2px solid #ccc; /* Border around each thumbnail */
+    border-radius: 8px;
+    box-shadow: 0 9px 9px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.thumbnail-content {
+    padding: 0px 0px 20px 0px; /* Padding inside the thumbnail frame */
+}
+
+.thumbnail-content img {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px 8px 0px 0px; 
+}
+
+.thumbnail-content h3 {
+    margin-top: 10px;
+    font-size: 18px; /* Adjust title font size */
+}
+
+.thumbnail-content p {
+    margin-top: 10px;
+}
+
+.thumbnail-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #831bcd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.thumbnail-content .btn:hover {
+    background-color: #f9620b;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #projects {
+        grid-template-columns: 1fr; /* This changes the layout to single column */
+    }
+}
+/*Nav menu*/
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap if needed, but we'll manage this with media queries */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 20px;
+}
+
+/* Ensuring the nav logo and toggle are always aligned left */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allows the navbar-container to grow and use available space */
+}
+
+.nav-logo img {
+    height: 50px; /* Adjust the height as necessary */
+    width: auto; /* This will maintain the aspect ratio of your logo */
+    border: none; /* Removes any borders */
+    border-radius: 0; /* Removes any round corners */
+    box-shadow: none; /* Removes any shadow effects */
+}
+
+/* Adjustments to the nav-menu to display inline on desktop */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1; /* Allows the nav-menu to grow and use available space */
+    justify-content: flex-end; /* Aligns menu items to the right */
+}
+
+/* Styling for nav items and resume button */
+.nav-menu a, .nav-menu .resume-button {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.0rem;
+    padding: 0.5rem 1rem;
+}
+
+.resume-button {
+    background-color: #831bcd;
+    color: #fff;
+}
+
+/* Hide the toggle button on wider screens */
+.nav-toggle {
+    display: none;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide by default on mobile */
+        /* Additional mobile-specific styles here */
+    }
+
+    /* Styling adjustments for when the nav-menu is active */
+    .nav-menu.active {
+        display: flex; /* Display the menu in a column when active */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button on mobile */
+        margin-left: auto; /* Ensures the toggle button is aligned to the right */
+    }
+    .nav-toggle i {
+        font-size: 24px; /* Increase to desired size */
+        cursor: pointer;
+    }
+}
+
+
+/* Dark Mode Adjustments */
+.dark-mode .navbar {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .nav-menu a, .dark-mode .nav-menu .resume-button {
+    color: #fff;
+}
+
+.dark-mode .nav-menu a:hover, .dark-mode .nav-menu .resume-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+/* Poject popup */
+
+/* The Modal (background) */
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Adjust based on content */
+    max-height: 80vh; /* Limit the height to ensure it doesn't overflow the viewport */
+    overflow-y: auto; /* Allow scrolling within the modal if content exceeds its max height */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box; /* Ensure padding and border are included in width calculations */
+    max-width: 80%; /* Adjusted for a better layout */
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.modal-row {
+    display: flex;
+    justify-content: space-between; /* Ensures spacing between columns */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.column {
+    flex: 1 1 45%; /* Give each column a bit of flex-grow and flex-shrink, but base size of 45% */
+    margin: 5px; /* Small margin for spacing */
+    min-width: 250px; /* Minimum width before wrapping */
+    flex-basis: 45%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+.image-carousel img {
+    width: auto; /* Adjust based on your layout needs */
+    height: 100px; /* Example height, adjust as necessary */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    margin-bottom: 10px;
+    border-radius: 50%; /* Creates circular images */
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-top: 10px;
+}
+
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.github-link i {
+    margin: 0; /* Center the icon */
+}
+
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-row {
+        flex-direction: column;
+    }
+
+    .column {
+        flex-basis: auto; /* Allows the column to take necessary space */
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+
+.carousel-container {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    display: none; /* Hide images by default */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove any rounded corners */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
